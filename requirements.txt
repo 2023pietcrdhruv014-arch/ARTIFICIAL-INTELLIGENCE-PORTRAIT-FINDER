@@ -1,1 +1,6 @@
 
+Flask
+tensorflow
+tensorflow-hub
+numpy
+Pillow
