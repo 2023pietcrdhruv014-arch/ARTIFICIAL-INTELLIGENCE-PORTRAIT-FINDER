@@ -1,1 +1,65 @@
 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Object Detector Pro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+        .preview {
+            max-width: 100%;
+            width: 800px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        .btn {
+            background: #1a73e8;
+            color: white;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background: #1558b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Object Detection Web App</h1>
+        <p>Upload an image and detect objects with AI</p>
+
+```
+    <form method="post" enctype="multipart/form-data" action="/predict_v2">
+        <input type="file" name="file" accept="image/*" required><br><br>
+        <input type="submit" value="Upload & Detect" class="btn">
+    </form>
+
+    {% if image_path %}
+        <h3>Detection Result:</h3>
+        <img src="/{{ image_path }}" class="preview">
+    {% endif %}
+</div>
+```
+
+</body>
+</html>
